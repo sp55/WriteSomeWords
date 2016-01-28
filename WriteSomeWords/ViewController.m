@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "DrawSomeWords.h"
 @interface ViewController ()
+@property(strong,nonatomic)    DrawSomeWords *drawSomeWords;
 
 @end
 
@@ -16,12 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    _drawSomeWords = [[DrawSomeWords alloc]init];
+    [_drawSomeWords showWordsOnView:self.view string:@"Happy New Year!"];
 }
 
 @end
